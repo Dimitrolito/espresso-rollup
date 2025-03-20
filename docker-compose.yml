@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  rollup:
+    image: node:18
+    container_name: espresso-rollup
+    volumes:
+      - ./:/app
+    working_dir: /app
+    command: ["node", "scripts/deploy-rollup.js"]
